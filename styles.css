@@ -1,71 +1,96 @@
-* {
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.noto-sans-kr-custom {
-    font-family: "Noto Sans KR", sans-serif; /* 폰트 패밀리 설정 */
-    font-optical-sizing: auto; /* 자동 광학 크기 조정 */
-    font-weight: 700; /* 원하는 글꼴 두께 */
-    font-style: normal; /* 글꼴 스타일 설정 */
-    text-align: center;
-  }
-
-body, html {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background-color: black; /* 배경색을 검정색으로 설정 */
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: black; /* 초기 배경 색상 */
+    overflow: auto; /* 스크롤 가능하게 변경 */
 }
 
 .background {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+    position: relative; /* 배경을 상대 위치로 설정 */
+    height: 100vh; /* 전체 화면 높이 */
+    padding: 50px 0; /* 위 아래 여백 추가 */
+    box-sizing: border-box; /* 패딩이 포함된 높이 계산 */
 }
 
+.cards-container {
+    display: flex; /* 카드를 가로로 배치 */
+    justify-content: center; /* 가운데 정렬 */
+    flex-wrap: wrap; /* 카드가 화면 크기에 따라 자동으로 줄 바꿈 */
+    gap: 16px; /* 카드 간 간격 */
+    max-width: 100%; /* 최대 너비를 100%로 설정 */
+    margin: 0 auto; /* 가운데 정렬 */
+}
+
+/* 카드 기본 스타일 */
 .card {
-    width: 300px;
-    height: 450px;
-    perspective: 1000px; /* 원근감 효과를 주기 위해 설정 */
+    perspective: 1000px; /* 3D 효과를 위해 사용 */
+    position: relative; /* 카드 내부에서 상대 위치 사용 */
+    width: 230px; /* 카드의 너비를 고정 (예시: 150px) */
+    height: 370px; /* 카드 높이 조정 */
+    border-radius: 5px; /* 둥글게 만들기 */
+    overflow: hidden; /* 둥근 모서리에 맞춰 잘리도록 설정 */
+}
+
+/* 카드 배열 조정 */
+@media (max-width: 1200px) {
+    .cards-container {
+        flex-direction: row; /* 기본적으로 가로 배열 */
+    }
+}
+
+@media (max-width: 900px) {
+    .cards-container {
+        flex-direction: column; /* 화면이 좁아지면 세로 배열 */
+        align-items: center; /* 세로 배열 시 중앙 정렬 */
+    }
+}
+
+@media (max-width: 600px) {
+    .cards-container {
+        flex-direction: column; /* 작은 화면에서 세로 배열 유지 */
+        align-items: center; /* 중앙 정렬 */
+    }
 }
 
 .card-inner {
-    width: 100%;
-    height: 100%;
     position: relative;
+    width: 100%; /* 카드 내부 너비 */
+    height: 100%; /* 카드 내부 높이 */
     transition: transform 0.6s; /* 회전 애니메이션 */
-    transform-style: preserve-3d; /* 3D 효과를 유지 */
+    transform-style: preserve-3d; /* 3D 변환 스타일 유지 */
 }
 
 .front, .back {
-    width: 100%;
-    height: 100%;
-    border-radius:5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: absolute;
-    backface-visibility: hidden; /* 뒷면을 숨기기 위해 설정 */
+    width: 100%; /* 카드 내부 너비 */
+    height: 100%; /* 카드 내부 높이 */
+    backface-visibility: hidden; /* 뒷면이 가려지도록 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0); /* 글자 색상 */
+    font-size: 80px; /* 글자 크기 조정 */
+    border-radius: 5px; /* 둥글게 만들기 */
 }
 
 .front {
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff; /* 카드 앞면 색상 */
 }
 
 .back {
-    background-color: rgb(255, 255, 255);
-    transform: rotateY(180deg); /* 처음에 뒷면을 회전 */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* 중앙 정렬 */
-    justify-content: center; /* 중앙 정렬 */
+    background-color: #ffffff; /* 카드 뒷면 색상 */
+    transform: rotateY(180deg); /* 뒷면이 180도 회전 */
+}
+
+.noto-sans-kr-custom {
+    font-weight: 700; /* 글씨 두께 설정 (700은 굵기) */
+    text-align: center; /* 가운데 정렬 */
+    margin: 0; /* 기본 여백 제거 */
 }
 
 .qr-code {
-    width: 150px; /* QR 코드 이미지 크기 조정 */
-    height: auto; /* 비율 유지 */
-    margin-top: 10px; /* 상단 여백 추가 */
+    width: 120px; /* 원하는 크기로 조정 */
+    height: auto; /* 비율을 유지하기 위해 자동 설정 */
+    display: block; /* 블록 요소로 설정하여 중앙 정렬 */
+    margin: 0 auto; /* 중앙 정렬을 위해 여백 자동 설정 */
 }
