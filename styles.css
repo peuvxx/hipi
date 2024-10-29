@@ -108,7 +108,7 @@ body {
     width: 170px; /* 이미지 크기 조정 */
     height: auto;
     margin-top: 5px;
-    margin-bottom: r5px; /* 텍스트와의 간격 조정 */
+    margin-bottom: 10px; /* 텍스트와의 간격 조정 */
 }
 
 .noto-sans-kr-custom1 {
@@ -117,3 +117,17 @@ body {
     margin: 0; /* 기본 여백 제거 */
 }
 
+h2{
+  
+    font-family:"helvetica";
+    
+    font-size:170px;
+    
+    font-weight:10;
+    
+    text-transform:none;
+    
+    color:#000000
+  }
+  
+  

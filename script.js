@@ -16,5 +16,12 @@ cardInners.forEach((cardInner) => {
         const randomColor = `hsl(${randomHue}, ${randomSaturation}%, ${randomLightness}%)`; 
 
         document.body.style.backgroundColor = randomColor;
+
+        // 카드가 뒤집힌 상태라면 3초 후 다시 앞면으로 뒤집기
+        if (!isFlipped) {
+            setTimeout(() => {
+                cardInner.style.transform = 'rotateY(0deg)';
+            }, 2500); // 3초 후에 앞면으로 뒤집음
+        }
     });
 });
