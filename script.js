@@ -10,7 +10,11 @@ cardInners.forEach((cardInner) => {
         cardInner.style.transform = isFlipped ? 'rotateY(0deg)' : 'rotateY(180deg)';
 
         // 배경 색상 변경
-        const randomColor = `hsl(${Math.random() * 360}, 100%, 50%)`; // 랜덤 색상 생성
+        const randomHue = Math.random() * 360; // 랜덤 색상 생성
+        const randomSaturation = Math.random() * 50 + 50; // 채도 50%~100%
+        const randomLightness = Math.random() * 30 + 40; // 명도 40%~100%
+        const randomColor = `hsl(${randomHue}, ${randomSaturation}%, ${randomLightness}%)`; 
+
         document.body.style.backgroundColor = randomColor;
     });
 });
