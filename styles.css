@@ -38,18 +38,6 @@ body {
     
 }
 
-/* 반응형 레이아웃 */
-@media (max-width: 768px) {
-    .card {
-        width: calc(50% - 16px); /* 중간 크기 화면에서 50% */
-    }
-}
-
-@media (max-width: 480px) {
-    .card {
-        width: calc(100% - 16px); /* 작은 화면에서 100% */
-    }
-}
 
 .card-inner {
     position: relative;
@@ -57,6 +45,19 @@ body {
     height: 100%; /* 카드 내부 높이 */
     transition: transform 0.6s; /* 회전 애니메이션 */
     transform-style: preserve-3d; /* 3D 변환 스타일 유지 */
+}
+
+/* 모바일 화면 크기 (예: 768px 이하)에서 카드와 이미지 크기 조정 */
+@media (max-width: 768px) {
+    .card {
+        width: 150px; /* 카드 크기를 작게 설정 */
+        height: 250px; /* 카드 높이 조정 */
+    }
+    
+    .card img {
+        width: 50%; /* 이미지 크기 줄이기 */
+        height: auto;
+    }
 }
 
 .front, .back {
