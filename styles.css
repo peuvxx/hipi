@@ -2,7 +2,8 @@ body {
     display: flex; /* 플렉스 박스를 사용하여 중앙 정렬 */
     justify-content: center; /* 수평 중앙 정렬 */
     align-items: center; /* 수직 중앙 정렬 */
-    height: 100vh; /* 화면 전체 높이 */
+    min-height: 100vh;
+   
     margin: 0; /* 기본 여백 제거 */
     background-color: #000000;
 }
@@ -35,6 +36,19 @@ body {
     overflow: hidden; /* 둥근 모서리에 맞춰 잘리도록 설정 */
    
     
+}
+
+/* 반응형 레이아웃 */
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 16px); /* 중간 크기 화면에서 50% */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: calc(100% - 16px); /* 작은 화면에서 100% */
+    }
 }
 
 .card-inner {
