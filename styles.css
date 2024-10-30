@@ -55,7 +55,7 @@ body {
     }
     
     .card img {
-        width: 50%; /* 이미지 크기 줄이기 */
+        width: 20%; /* 이미지 크기 줄이기 */
         height: auto;
     }
 }
