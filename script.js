@@ -26,6 +26,8 @@ cardInners.forEach((cardInner) => {
     });
 });
 
+
+
 const images = [
     'images/h1.png', // 실제 이미지 파일 경로로 변경
     'images/h2.png', // 실제 이미지 파일 경로로 변경
