@@ -17,16 +17,16 @@ body {
     flex-wrap: wrap; /* 카드가 화면 크기에 따라 자동으로 줄 바꿈 */
     justify-content: center; /* 가운데 정렬 */
     align-items: center; /* 세로 중앙 정렬 */
-     height: calc(100vh - 100px); /* 카드를 수직 중앙에 위치시키기 위해 높이를 조정 (여백 고려) */
-     max-width: calc(4 * 200px + 3 * 16px); /* 카드 너비와 간격을 고려하여 최대 너비 설정 */
-     min-width: calc(2 * 100px + 3 * 10px); /* 카드 너비와 간격을 고려하여 최대 너비 설정 */
-     margin: 0 auto; /* 가운데 정렬 */
+    gap: 16px; /* 카드 간 간격 */
+    max-width: 100%; /* 최대 너비를 100%로 설정 */
+    height: calc(100vh - 100px); /* 카드를 수직 중앙에 위치시키기 위해 높이를 조정 (여백 고려) */
 }
 
 /* 최대 4개씩 2줄 배열 */
 .cards-container {
     /* 이 속성을 추가하여 최대 카드 개수를 제한합니다. */
-   
+    max-width: calc(4 * 200px + 3 * 16px); /* 카드 너비와 간격을 고려하여 최대 너비 설정 */
+    margin: 0 auto; /* 가운데 정렬 */
 }
 
 /* 카드 기본 스타일 */
