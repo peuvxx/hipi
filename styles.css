@@ -133,31 +133,28 @@ h2{
   }
   
  
-.falling-image {
+  .falling-image {
     position: absolute;
-    top: -300px; /* 시작 위치 */
+    top: -300px; /* 화면 위 바깥에서 시작 */
     width: 200px; /* 이미지 크기 설정 */
     height: auto;
     opacity: 1; /* 초기 불투명도 */
-    animation: fallOut 40s linear forwards; /* 애니메이션 설정 */
+    animation: fallOut 2s linear forwards; /* 애니메이션 설정 */
     border-radius: 100%;
 }
 
 @keyframes fallOut {
     0% {
-        top: -300px; /* 화면 위 바깥에서 시작 */
+        top: -10px; /* 화면 위 바깥에서 시작 */
         opacity: 1; /* 초기 불투명도 */
         transform: rotate(0deg); /* 초기 회전 */
     }
     80% {
-        opacity: 0.8; /* 중간 불투명도 */
+        opacity: 1; /* 중간 불투명도 */
     }
     100% {
-        top: 2000vh; /* 화면 아래로 떨어짐 */
+        top: calc(100vh - 2px); /* 화면 하단에 거의 닿도록 설정 */
         opacity: 0; /* 끝에 가서 투명해짐 */
         transform: rotate(360deg); /* 360도 회전 */
     }
 }
-
-
-
