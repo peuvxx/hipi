@@ -39,15 +39,15 @@ const images = [
     'images/h8.png', // 실제 이미지 파일 경로로 변경
     'images/h9.png', 
     'images/h10.png', 
-    'images/h11.png', 
-    'images/h12.png', 
-    'images/h13.png', 
-    'images/h14.png', 
-    'images/h15.png', 
-    'images/h16.png', 
-    'images/h17.png', 
-    'images/h18.png', 
-    'images/h19.png', 
+   // 'images/h11.png', 
+    //'images/h12.png', 
+    //'images/h13.png', 
+   // 'images/h14.png', 
+   // 'images/h15.png', 
+   // 'images/h16.png', 
+   // 'images/h17.png', 
+   // 'images/h18.png', 
+   // 'images/h19.png', 
   
 ];
 
