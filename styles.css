@@ -145,13 +145,19 @@ h2{
 
 @keyframes fallOut {
     0% {
-        top: 100px; /* 시작 위치 */
-        opacity: 1; /* 시작 시 불투명도 */
+        top: -300px; /* 화면 위 바깥에서 시작 */
+        opacity: 1; /* 초기 불투명도 */
+        transform: rotate(0deg); /* 초기 회전 */
+    }
+    80% {
+        opacity: 0.8; /* 중간 불투명도 */
     }
     100% {
-        top: calc(100vh + 20000px); /* 화면 아래로 떨어지는 위치 */
-        opacity: 1; /* 최종 시 투명도 0 */
+        top: 2000vh; /* 화면 아래로 떨어짐 */
+        opacity: 0; /* 끝에 가서 투명해짐 */
+        transform: rotate(360deg); /* 360도 회전 */
     }
 }
+
 
 
