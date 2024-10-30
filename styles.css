@@ -135,7 +135,7 @@ h2{
  
 .falling-image {
     position: absolute;
-    top: -100px; /* 시작 위치 */
+    top: -300px; /* 시작 위치 */
     width: 200px; /* 이미지 크기 설정 */
     height: auto;
     opacity: 1; /* 초기 불투명도 */
