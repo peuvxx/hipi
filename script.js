@@ -39,15 +39,15 @@ const images = [
     'images/h8.png', // 실제 이미지 파일 경로로 변경
     'images/h9.png', 
     'images/h10.png', 
-    'images/h11.png', 
-    'images/h12.png', 
-    'images/h13.png', 
-    'images/h14.png', 
-    'images/h15.png', 
-    'images/h16.png', 
-    'images/h17.png', 
-    'images/h18.png', 
-    'images/h19.png', 
+   // 'images/h11.png', 
+   // 'images/h12.png', 
+   // 'images/h13.png', 
+   // 'images/h14.png', 
+   // 'images/h15.png', 
+   // 'images/h16.png', 
+   // 'images/h17.png', 
+   // 'images/h18.png', 
+   // 'images/h19.png', 
   
 ];
 
@@ -68,7 +68,7 @@ function createFallingImage() {
     // 애니메이션이 끝난 후 5초 후에 사라지도록 설정
     setTimeout(() => {
         image.remove(); // 5초 후에 DOM에서 삭제
-    }, 6000); // 애니메이션 시간과 동일하게 설정
+    }, 3000); // 애니메이션 시간과 동일하게 설정
 }
 
 // 무한으로 이미지 생성
