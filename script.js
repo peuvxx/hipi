@@ -11,7 +11,7 @@ cardInners.forEach((cardInner) => {
 
         // 배경 색상 변경
         const randomHue = Math.random() * 360; // 랜덤 색상 생성
-        const randomSaturation = Math.random() * 70 + 50; // 채도 50%~100%
+        const randomSaturation = Math.random() * 60 + 800; // 채도 50%~100%
         const randomLightness = Math.random() * 30 + 40; // 명도 40%~100%
         const randomColor = `hsl(${randomHue}, ${randomSaturation}%, ${randomLightness}%)`; 
 

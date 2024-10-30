@@ -18,8 +18,10 @@ body {
     justify-content: center; /* 가운데 정렬 */
     align-items: center; /* 세로 중앙 정렬 */
     gap: 16px; /* 카드 간 간격 */
-    max-width: 100%; /* 최대 너비를 100%로 설정 */
+    max-width: 1200px; /* 최대 너비를 100%로 설정 */
+    margin: 0 auto;
     height: calc(100vh - 100px); /* 카드를 수직 중앙에 위치시키기 위해 높이를 조정 (여백 고려) */
+   
 }
 
 /* 최대 4개씩 2줄 배열 */
@@ -61,6 +63,8 @@ body {
     color: rgb(0, 0, 0); /* 글자 색상 */
     font-size: 80px; /* 글자 크기 조정 */
     border-radius: 5px; /* 둥글게 만들기 */
+    margin-bottom: 16px;
+    margin-top: 0px;
 }
 
 .back {
@@ -87,6 +91,13 @@ body {
     height: auto; /* 비율을 유지하기 위해 자동 설정 */
     display: block; /* 블록 요소로 설정하여 중앙 정렬 */
     margin: 0 auto; /* 중앙 정렬을 위해 여백 자동 설정 */
+}
+
+.r {
+    width: 135px;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
 }
 
 .hipicute {
