@@ -139,6 +139,7 @@ h2{
     opacity: 1; /* 초기 불투명도 */
     animation: fallOut 80s linear forwards; /* 애니메이션 설정 */
     border-radius: 100%;
+    
 }
 
 @keyframes fallOut {
