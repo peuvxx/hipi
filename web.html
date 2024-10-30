@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Welcome! we're H!pi" />
+    <meta property="og:description" content="Welcome! we're H!pi" />
+    <meta property="og:image" content="https://cdn.discordapp.com/attachments/1290342518361161903/1300801083823882291/hipicute.png?ex=672228ea&is=6720d76a&hm=b91e2e9c5175c713be8c23b72517b99f7fa170526115893993cff92640538107&" />
+    <meta property="og:url" content="https://yourwebsite.com" />
+    <title>Welcome! We're H!pi</title>
+    <style type="text/css">
+        @font-face{
+            font-family:"helvetica";
+            src:url("https://candyfonts.com/wp-data/2018/10/26/11538/HELR45W.ttf") format("woff"),
+            url("https://candyfonts.com/wp-data/2018/10/26/11538/HELR45W.ttf") format("opentype"),
+            url("https://candyfonts.com/wp-data/2018/10/26/11538/HELR45W.ttf") format("truetype");
+        }
+
+        /* 전체 화면을 flexbox로 설정 */
+        body {
+            display: flex; /* 플렉스 박스 사용 */
+            justify-content: center; /* 수평 중앙 정렬 */
+            align-items: center; /* 수직 중앙 정렬 */
+            padding: 30px;
+            margin-top: -400px;
+            
+        }
+
+        .cards-container {
+            display: flex; /* 카드를 가로로 배치 */
+            flex-wrap: wrap; /* 카드가 화면 크기에 따라 자동으로 줄 바꿈 */
+            justify-content: center; /* 가운데 정렬 */
+            align-items: center; /* 세로 중앙 정렬 */
+            gap: 16px; /* 카드 간 간격 */
+            max-width: 1200px; /* 최대 너비를 1200px로 설정 */
+            width: 100%;
+            height: 16px; 
+            padding: 0px;
+           
+        }
+
+        .card {
+            border-radius: 8px; /* 카드 모서리 둥글게 */
+            overflow: hidden; /* 카드 내용이 넘칠 경우 숨김 */
+            width: calc(25% - 15px);
+            height: 0; /* 카드 높이 */
+            padding-bottom:  40%;
+            position: relative; /* 카드 안에서 내부 요소 배치에 필요 */
+            perspective: 1000px; /* 3D 효과 */
+        }
+
+        .card-inner {
+            position: absolute; /* 카드 내부 요소 위치 지정 */
+            top: 0;
+            left: 0;
+            width: 100%; /* 카드 너비에 맞춤 */
+            height: 100%; /* 카드 높이에 맞춤 */
+            transform-style: preserve-3d; /* 3D 변형 스타일 */
+            transition: transform 0.6s; /* 회전 전환 효과 */
+        }
+
+       
+
+        .front, .back {
+            position: absolute; /* 앞면과 뒷면 위치 지정 */
+    width: 100%; /* 카드 너비에 맞춤 */
+    height: 100%; /* 카드 높이에 맞춤 */
+    backface-visibility: hidden; /* 뒷면 보이지 않게 설정 */
+    display: flex; /* 자식 요소 중앙 정렬을 위해 flexbox 사용 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+        }
+
+        .back {
+            transform: rotateY(180deg); /* 뒷면 회전 */
+        }
+
+        .qr-code {
+            width: 60%; /* QR 코드 이미지를 카드 크기에 맞춤 */
+            height: auto; /* 비율 유지 */
+            object-fit: contain; /* 비율을 유지하며 카드 안에 맞춤 */
+        }
+
+        .noto-sans-kr-custom, .noto-sans-kr-custom1 {
+            font-family: 'Noto Sans KR', sans-serif; /* 폰트 설정 */
+            text-align: center; /* 텍스트 중앙 정렬 */
+            padding: 10px; /* 패딩 */
+        }
+
+  /* 작은 화면에서 카드 크기 조정 */
+  @media (max-width: 768px) {
+            .card {
+                width: calc(50% - 16px); /* 중간 크기 화면에서 카드 너비를 50%로 설정 (2개 나란히) */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                width: calc(100% - 16px); /* 작은 화면에서 카드 너비를 100%로 설정 (1개) */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cards-container">
+        <div class="card">
+            <div class="card-inner" id="card-inner-1">
+                <div class="front">
+                    <h2 class="noto-sans-kr-custom"> <img src="images/w.png" alt="w" class="qr-code"> </h2>
+                </div>
+                <div class="back">
+                    <h1 class="noto-sans-kr-custom1">H!Pi : 근사한(힙한)나</h1>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-inner" id="card-inner-2">
+                <div class="front">
+                    <img src="images/e.png" alt="e" class="qr-code">
+                </div>
+                <div class="back">
+                    <h2 class="noto-sans-kr-custom1">H!Pi는 다층적이고 <br> 가변적인 조직으로 <br> 나와 우리, 사회 간의 <br>느슨한 연결을 통한 <br>연대를 지향한다.</h2>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-inner" id="card-inner-3">
+                <div class="front">
+                    <img src="images/r.png" alt="r" class="qr-code">
+                </div>
+                <div class="back">
+                    <h2 class="noto-sans-kr-custom1">지방에서 청춘들이 즐기고 <br> 살아가는 모습을 담은 <br> 콘텐츠로 기존의 <br> ‘천안 8경’을 <br>‘충남 8경’으로 각색해 <br>충남의 매력적인 <br>장소들에 대해 알린다.</h2>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-inner" id="card-inner-4">
+                <div class="front">
+                    <img src="images/e.png" alt="e" class="qr-code">
+                </div>
+                <div class="back">
+                    <h2 class="noto-sans-kr-custom1">서울과 수도권 못지 않게 <br>충남에도 젊은 세대가 즐길 <br>다양한 볼거리와 매력적인<br> 장소가 있음을 알린다.</h2>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-inner" id="card-inner-5">
+                <div class="front">
+                    <img src="images/h.png" alt="h" class="qr-code">
+                </div>
+                <div class="back">
+                    <h1 class="noto-sans-kr-custom1">충남의 풍부한 문화를 <br>전파하고 수도권과의 <br>격차 인식과 편견을<br> 타파한다.</h1>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-inner" id="card-inner-6">
+                <div class="front">
+                    <img src="images/i.png" alt="i" class="qr-code">
+                </div>
+                <div class="back">
+                    <h2 class="noto-sans-kr-custom1">책, <br>엽서, <br>웹사이트,<br> 인스타 등으로 <br>충남 8경을 알린다.</h2>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-inner" id="card-inner-7">
+                <div class="front">
+                    <img src="images/p.png" alt="p" class="qr-code">
+                </div>
+                <div class="back">
+                    <a href="https://www.instagram.com/h1___p1/">
+                        <img src="images/qrinsta.png" alt="QR 코드" class="qr-code">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-inner" id="card-inner-8">
+                <div class="front">
+                    <img src="images/ii.png" alt="ii" class="qr-code">
+                </div>
+                <div class="back">
+                    <h2 class="noto-sans-kr-custom1">충남 8경을 알리기 위해 <br>우리는 끊임없이 <br>탐구하고 연구하고 <br>소통하겠다.</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -19,113 +19,63 @@
             url("https://candyfonts.com/wp-data/2018/10/26/11538/HELR45W.ttf") format("opentype"),
             url("https://candyfonts.com/wp-data/2018/10/26/11538/HELR45W.ttf") format("truetype");
         }
-        
-        </style>
+
+        /* 기본 스타일 설정 */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Noto Sans KR", sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .book-container {
+            display: flex;
+            gap: 90px;
+        }
+
+        /* 이미지와 확대 효과 스타일 */
+        .book {
+            width: 300px;
+            height: auto;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .book img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .book:hover img {
+            transform: scale(1.1); /* 커서를 올리면 10% 확대 */
+        }
+    </style>
 </head>
 <body>
-    <div class="background">
-        <div class="cards-container">
-            <div class="card">
-                <div class="card-inner" id="card-inner-1">
-                    <div class="front">
-                        <h2 class="noto-sans-kr-custom"> <img src="images/w.png" alt="w" class="qr-code"> </h2>
+    <div class="book-container">
+        <a href="web.html">
+            <div class="book">
+                <img src="images/web.png" alt="웹" class="book"> 
+            </div>
+        </a>
 
-                    </div>
-                    <div class="back">
-                        <h1 class="noto-sans-kr-custom1">H!Pi : 근사한(힙한)나</h1>
-                            
-                    </div>
-                </div>
+        <a href="book.html">
+            <div class="book">
+                <img src="images/book.png" alt="책" class="book">
             </div>
-            <div class="card">
-                <div class="card-inner" id="card-inner-2">
-                    <div class="front">
-                        <img src="images/e.png" alt="e" class="qr-code">
-                    </div>
-                    <div class="back">
-                        <h2 class="noto-sans-kr-custom1">H!Pi는 다층적이고 <br> 가변적인 조직으로 <br> 나와 우리, 사회 간의 <br>느슨한 연결을  통한 <br>연대를 지향한다. </h2>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-inner" id="card-inner-3">
-                    <div class="front">
-                        <img src="images/r.png" alt="r" class="r">
-                    </div>
-                    <div class="back">
-                        <h2 class="noto-sans-kr-custom1">지방에서 청춘들이 즐기고 <br> 살아가는 모습을 담은 <br> 콘텐츠로 기존의 <br> ‘천안 8경’을 
-                            <br>‘충남 8경’으로 각색해 <br>충남의 매력적인 <br>장소들에 대해 알린다. </h2>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-inner" id="card-inner-4">
-                    <div class="front">
-                        <img src="images/e.png" alt="e" class="qr-code">
-                    </div>
-                    <div class="back">
-                        <h2 class="noto-sans-kr-custom1">서울과 수도권 못지 않게 <br>충남에도 젊은 세대가 즐길 <br>다양한 볼거리와 매력적인<br> 장소가 있음을 알린다.  </h2>
+        </a>
 
-                    </div>
-                </div>
+        <a href="post.html">
+            <div class="book">
+                <img src="images/post.png" alt="엽서" class="book">
             </div>
-            <div class="card">
-                <div class="card-inner" id="card-inner-5">
-                    <div class="front">
-                        <img src="images/h.png" alt="h" class="qr-code">
-                    </div>
-                    <div class="back">
-                        <h1 class="noto-sans-kr-custom1">충남의 풍부한 문화를 <br>전파하고 수도권과의 <br>격차 인식과 편견을<br> 타파한다. </h1>
-
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-inner" id="card-inner-6">
-                    <div class="front">
-                        <img src="images/i.png" alt="i" class="qr-code">
-                    </div>
-                    <div class="back">
-                        <h2 class="noto-sans-kr-custom1"> 책, <br>엽서, <br>웹사이트,<br> 인스타 등으로 <br>충남 8경을 알린다. </h2>
-
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-inner" id="card-inner-7">
-                    <div class="front">
-                        <img src="images/p.png" alt="p" class="qr-code">
-                    </div>
-                    <div class="back">
-
-                            <a href="https://www.instagram.com/h1___p1/">
-                                <img src="images/qrinsta.png" alt="QR 코드" class="qr-code">
-                                 </a>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-inner" id="card-inner-8">
-                    <div class="front">
-                        <img src="images/ii.png" alt="ii" class="qr-code">
-                    </div>
-                   
-                    <div class="back1">
-                        <img src="images/hipicute.png" alt="얼굴사진" class="hipicute">
-                        <br>
-                        <h2 class="noto-sans-kr-custom1"> 구나영, 김민지, <br> 조현진, 최수빈</h2>
-                    </div>
-                </div>
-            </div>
-        
-        
-         
-        </div>
+        </a>
     </div>
-    <div class="background">
-        <!-- 하늘에서 떨어지는 이미지가 나타나는 공간 -->
-    </div>
-
 
     <script src="script.js"></script>
 </body>

@@ -1,16 +1,12 @@
 body {
-    margin: 0;
-    font-family: 'Noto Sans KR', sans-serif;
-    background-color: black; /* 초기 배경 색상 */
-    overflow: auto; /* 스크롤 가능하게 변경 */
+    display: flex; /* 플렉스 박스를 사용하여 중앙 정렬 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    height: 100vh; /* 화면 전체 높이 */
+    margin: 0; /* 기본 여백 제거 */
+    background-color: #000000;
 }
 
-.background {
-    position: relative; /* 배경을 상대 위치로 설정 */
-    height: 100vh; /* 전체 화면 높이 */
-    padding: 50px 0; /* 위 아래 여백 추가 */
-    box-sizing: border-box; /* 패딩이 포함된 높이 계산 */
-}
 
 .cards-container {
     display: flex; /* 카드를 가로로 배치 */
@@ -18,10 +14,8 @@ body {
     justify-content: center; /* 가운데 정렬 */
     align-items: center; /* 세로 중앙 정렬 */
     gap: 16px; /* 카드 간 간격 */
-    max-width: 1200px; /* 최대 너비를 100%로 설정 */
-    margin: 0 auto;
-    height: calc(100vh - 100px); /* 카드를 수직 중앙에 위치시키기 위해 높이를 조정 (여백 고려) */
-   
+    max-width: 1200px; /* 최대 너비를 1200px로 설정 */
+    height: auto; /* 자동 높이 설정 */
 }
 
 /* 최대 4개씩 2줄 배열 */
@@ -169,3 +163,20 @@ h2{
         transform: rotate(360deg); /* 360도 회전 */
     }
 }
+
+.book-container {
+    display: flex; /* 플렉스 박스를 사용하여 카드 배치 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    flex-wrap: wrap; /* 카드가 화면 크기에 따라 자동으로 줄 바꿈 */
+    gap: 100px; /* 카드 간 간격 조정 */
+    padding: 0 20px; /* 좌우 패딩 추가 (필요에 따라 조정) */
+    max-width: 1400px; /* 최대 너비 설정 (필요에 따라 조정) */
+    margin: auto; /* 양쪽 여백을 자동으로 설정하여 가운데 정렬 */
+}
+.book {
+    width: 300px; /* 원하는 크기로 조정 */
+    height: auto; /* 비율을 유지하기 위해 자동 설정 */
+}
+
+
+

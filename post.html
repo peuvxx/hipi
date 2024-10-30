@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hipi_book</title>
+    <style>
+        body {
+            margin: 0; /* 기본 여백 제거 */
+            padding: 0; /* 기본 패딩 제거 */
+            background-color: #000000; /* 배경색 설정 */
+            color: #ffffff; /* 텍스트 색상 */
+        }
+
+        .book-container {
+            display: flex; /* Flexbox로 설정 */
+            justify-content: center; /* 중앙 정렬 */
+            align-items: flex-start; /* 상단 정렬 */
+            flex-wrap: wrap; /* 줄 바꿈 허용 */
+            gap: 20px; /* 이미지 간의 간격을 설정 */
+            margin: 20px; /* 상하좌우 마진 */
+        }
+
+        .book {
+            flex: 0 1 350px; /* 너비 350px, 크기 고정 */
+            cursor: pointer; /* 클릭 가능하다는 것을 나타내기 위해 커서 모양 변경 */
+            height: auto; /* 높이를 컨텐츠에 맞춤 */
+            text-align: center; /* 설명 텍스트를 중앙 정렬 */
+        }
+
+        .book-image {
+            width: 100%; /* 이미지가 카드에 맞춰 자동 조정 */
+            height: auto; /* 비율 유지 */
+            display: block; /* 이미지 블록 요소로 설정 */
+            object-fit: contain; /* 비율 유지하면서 이미지 표시 */
+        }
+
+        .description {
+            display: none; /* 기본적으로 설명 텍스트는 숨김 */
+            color: #ffffff; /* 텍스트 색상 */
+            margin-top: 10px; /* 이미지와 설명 사이 간격 */
+            font-family: noto-sans;
+        }
+    </style>
+</head>
+<body>
+    <div class="book-container">
+        <div class="book" onclick="toggleDescription(this)">
+            <img src="images/postcard/p4.jpg" alt="책" class="book-image">
+            <div class="description">삽교호 놀이공원</div>
+        </div>
+        <div class="book" onclick="toggleDescription(this)">
+            <img src="images/postcard/p2.jpg" alt="책" class="book-image">
+            <div class="description">삽교호 놀이공원</div>
+        </div>
+        <div class="book" onclick="toggleDescription(this)">
+            <img src="images/postcard/p3.jpg" alt="책" class="book-image">
+            <div class="description">피나클랜드</div>
+        </div>
+        <div class="book" onclick="toggleDescription(this)">
+            <img src="images/postcard/p5.jpg" alt="책" class="book-image">
+            <div class="description">피나클랜드</div>
+        </div>
+        <div class="book" onclick="toggleDescription(this)">
+            <img src="images/postcard/p6.jpg" alt="책" class="book-image">
+            <div class="description">피나클랜드</div>
+        </div>
+        <div class="book" onclick="toggleDescription(this)">
+            <img src="images/postcard/p10.jpg" alt="책" class="book-image">
+            <div class="description">삽교호 놀이공원</div>
+        </div>
+        <div class="book" onclick="toggleDescription(this)">
+            <img src="images/postcard/p8.jpg" alt="책" class="book-image">
+            <div class="description">삽교호 놀이공원</div>
+        </div>
+        <div class="book" onclick="toggleDescription(this)">
+            <img src="images/postcard/p9.jpg" alt="책" class="book-image">
+            <div class="description">삽교호 놀이공원</div>
+        </div>
+        <div class="book" onclick="toggleDescription(this)">
+            <img src="images/postcard/p11.jpg" alt="책" class="book-image">
+            <div class="description">삽교호 놀이공원</div>
+        </div>
+        <div class="book" onclick="toggleDescription(this)">
+            <img src="images/postcard/p1.jpg" alt="책" class="book-image">
+            <div class="description">삽교호 놀이공원</div>
+        </div>
+    </div>
+
+    <script>
+        function toggleDescription(bookElement) {
+            const description = bookElement.querySelector('.description');
+            // 설명 텍스트의 display 속성을 토글합니다.
+            if (description.style.display === 'none' || description.style.display === '') {
+                description.style.display = 'block'; // 보이게 설정
+            } else {
+                description.style.display = 'none'; // 숨김 설정
+            }
+        }
+    </script>
+</body>
+</html>

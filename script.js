@@ -26,39 +26,21 @@ cardInners.forEach((cardInner) => {
     });
 });
 
-
-const images = [
-    'images/h1.png',
-    'images/h2.png',
-    'images/h3.png',
-    'images/h4.png',
-    'images/h5.png',
-    'images/h6.png',
-    'images/h7.png',
-    'images/h8.png',
-    'images/h9.png', 
-    'images/h10.png', 
+const colors = [
+    'hsl(314,99%,72%)',     // 빨간색
+    'hsl(120, 100%, 50%)',   // 초록색
+    'hsl(240, 100%, 50%)'    // 파란색
 ];
 
-function createFallingImage() {
-    const image = document.createElement('img');
-    
-    // 배열에서 랜덤한 이미지 선택
-    const randomIndex = Math.floor(Math.random() * images.length);
-    image.src = images[randomIndex]; // 랜덤 이미지 설정
-    image.className = 'falling-image';
-    
-    document.body.appendChild(image); // body에 이미지 추가
-    
-    // 랜덤한 위치 설정
-    const randomPosition = Math.random() * (window.innerWidth - 100); 
-    image.style.left = randomPosition + 'px'; 
+let currentIndex = 0; // 현재 색상 인덱스
 
-    // 애니메이션이 완료된 후 이미지 삭제
-    image.addEventListener('animationend', () => {
-        image.remove();
-    });
+function changeBackgroundColor() {
+    document.body.style.backgroundColor = colors[currentIndex]; // 현재 색상 설정
+    currentIndex = (currentIndex + 1) % colors.length; // 인덱스 증가 및 반복
 }
 
-// 무한으로 이미지 생성
-setInterval(createFallingImage, 2000); // 2초마다 이미지 생성
+// 3초마다 배경색 변경
+setInterval(changeBackgroundColor, 3000);
+
+// 페이지 로드 시 첫 색상 설정
+changeBackgroundColor();
