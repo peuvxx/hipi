@@ -73,4 +73,3 @@ function createFallingImage() {
 
 // 무한으로 이미지 생성
 setInterval(createFallingImage, 2000); // 2초마다 이미지 생성
-
