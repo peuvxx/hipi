@@ -101,6 +101,14 @@ body {
     display: block; /* 블록 요소로 설정하여 중앙 정렬 */
     margin: 0 auto; /* 중앙 정렬을 위해 여백 자동 설정 */
 }
+.qr-code1 {
+    width: 150px; /* 원하는 크기로 조정 */
+    height: auto; /* 비율을 유지하기 위해 자동 설정 */
+    display: block; /* 블록 요소로 설정하여 중앙 정렬 */
+    margin: 0 auto; /* 중앙 정렬을 위해 여백 자동 설정 */
+}
+
+
 
 .r {
     width: 135px;
