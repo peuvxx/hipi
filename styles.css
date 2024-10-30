@@ -22,6 +22,13 @@ body {
     height: calc(100vh - 100px); /* 카드를 수직 중앙에 위치시키기 위해 높이를 조정 (여백 고려) */
 }
 
+/* 최대 4개씩 2줄 배열 */
+.cards-container {
+    /* 이 속성을 추가하여 최대 카드 개수를 제한합니다. */
+    max-width: calc(4 * 200px + 3 * 16px); /* 카드 너비와 간격을 고려하여 최대 너비 설정 */
+    margin: 0 auto; /* 가운데 정렬 */
+}
+
 /* 카드 기본 스타일 */
 .card {
     perspective: 1000px; /* 3D 효과를 위해 사용 */
@@ -30,13 +37,6 @@ body {
     height: 330px; /* 카드 높이 조정 */
     border-radius: 5px; /* 둥글게 만들기 */
     overflow: hidden; /* 둥근 모서리에 맞춰 잘리도록 설정 */
-}
-
-/* 최대 4개씩 2줄 배열 */
-.cards-container {
-    /* 이 속성을 추가하여 최대 카드 개수를 제한합니다. */
-    max-width: calc(4 * 200px + 3 * 16px); /* 카드 너비와 간격을 고려하여 최대 너비 설정 */
-    margin: 0 auto; /* 가운데 정렬 */
 }
 
 .card-inner {
@@ -61,11 +61,11 @@ body {
     border-radius: 5px; /* 둥글게 만들기 */
 }
 
-
-
 .back {
     transform: rotateY(180deg); /* 뒷면이 180도 회전 */
 }
+
+
 
 .noto-sans-kr-custom {
     font-weight: 700; /* 글씨 두께 설정 (700은 굵기) */
@@ -108,7 +108,7 @@ body {
     width: 170px; /* 이미지 크기 조정 */
     height: auto;
     margin-top: 5px;
-    margin-bottom: 10px; /* 텍스트와의 간격 조정 */
+    margin-bottom: 1px; /* 텍스트와의 간격 조정 */
 }
 
 .noto-sans-kr-custom1 {
@@ -130,4 +130,24 @@ h2{
     color:#000000
   }
   
-  
+ 
+.falling-image {
+    position: absolute;
+    top: -100px; /* 시작 위치 */
+    width: 200px; /* 이미지 크기 설정 */
+    height: auto;
+    opacity: 1; /* 초기 불투명도 */
+    animation: fallOut 2s linear forwards; /* 애니메이션 설정 */
+    border-radius: 100%;
+}
+
+@keyframes fallOut {
+    0% {
+        top: 100px; /* 시작 위치 */
+        opacity: 1; /* 시작 시 불투명도 */
+    }
+    100% {
+        top: calc(100vh + -100px); /* 화면 아래로 떨어지는 위치 */
+        opacity: 1; /* 최종 시 투명도 0 */
+    }
+}
