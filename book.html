@@ -30,9 +30,27 @@
             display: block; /* 이미지 블록 요소로 설정 */
            
         }
+
+        .logo-container {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 150px; /* 로고 너비 */
+            height: auto;
+            z-index: 10; /* 다른 요소 위에 표시되도록 설정 */
+        }
+
+        .logo {
+            width: 100%; /* 로고 이미지가 컨테이너에 맞춰짐 */
+            height: auto;
+        }
     </style>
 </head>
 <body>
+  <!-- 로고 영역 -->
+  <div class="logo-container">
+    <a href="https://www.instagram.com/h1___p1/"><img src="images/logo.png" alt="로고" class="logo"></a> 
+  </div>
     <div class="book-container">
         <div class="book">
             <img src="images/book/b16.png" alt="책" class="book-image">
